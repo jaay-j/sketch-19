@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nineteenth Sketch</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.shape.js"></script>
+    <script src="lib/p5.particle.js"></script>
+
+
+</head>
+
+<body>
+
+    <script src="javascript/sketch-19.js"></script>
+
+    <h1>Sketch 19</h1>
+    <p> What I made with p5 -- Day 19! </p>
+    <br><br>
+    <img src="img/sketch-19.png">
+
+    <div id="container">
+
+    <h3>
+
+        var of; <br><br>
+
+        function setup() {<br>
+            createCanvas(1000, 1000);<br>
+            background(255, 253, 153);<br><br>
+        
+            var t =<br>
+            {<br>
+                name: "test",<br>
+                colors: [[255],[128, 209, 149],"red"],<br>
+                lifetime: 500,<br>
+                angle: [260,280],<br>
+                size: [2,10],<br>
+                speed: 3,<br>
+                speedx: 0.7,<br>
+                rate: [40,0.1,200,10],<br>
+                x: 0.5,<br>
+                y: 0.8<br>
+            };<br>
+            of = new Fountain(null, t);<br>
+        }<br><br>
+        
+        function draw() {<br>
+          background(255, 253, 153);<br><br>
+        
+          push();<br>
+        fill(255, 204, 100);<br>
+        stroke(0);<br>
+        hexagon(500, 500, 300, 2);<br>
+        pop();<br><br>
+        
+        push();<br>
+          stroke(242, 149, 0);<br>
+          strokeWeight(60);<br>
+          line(218, 379, 780, 622);<br>
+          pop();<br><br>
+        
+          of.Draw();<br>
+          of.CreateN();<br>
+          of.Step();<br>
+          noStroke();<br>
+          stroke(0);<br><br>
+        
+          push();<br>
+          noStroke();<br>
+          fill(242, 149, 0);<br>
+          rect(198, 500, 60, 300);<br><br>
+        
+          noStroke();<br>
+          fill(242, 149, 0);<br>
+          rect(798, 500, 60, 300);<br>
+          pop();<br>
+        
+        }        
+       <br>
+
+</h3>
+</div>
+
+
+<a href="https://jaay-j.github.io/sketch_main" style="font-size:30px; margin:40%; color: rgb(145, 35, 189);"> BACK TO MENU </a> 
+
+</body>
+</html>
